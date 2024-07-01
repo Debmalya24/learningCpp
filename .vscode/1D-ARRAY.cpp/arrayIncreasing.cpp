@@ -18,7 +18,7 @@ void display(int a[],int n){
 int main(){
 
     int n;
-    cout<<"Enter the no. of the elements in the array : ";
+    cout<<"Enter the no. of the elements in the array : " ;
     cin>>n;
 
     int arr[n];

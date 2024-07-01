@@ -7,40 +7,47 @@ using namespace std;
 
 int main(){
 
-    float sgpa1;
-    cout<<"Enter the total marks of sgpa1 =  ";
-    cin>>sgpa1;
+    int m;
+    cout<<"Enter the no. rows of the array : ";
+    cin>>m;
 
-    float sgpa2;
-    cout<<"Enter the total marks of sgpa2 =  ";
-    cin>>sgpa2;
+    int n;
+    cout<<"Enter the no. columns of the array : ";
+    cin>>n;
 
-    float sem1_total_marks=(sgpa1-0.5)*(1000)*0.1;
+    int matrix[m][n];
 
-    cout<<"Sem1 total marks obtain = "<<sem1_total_marks<<endl;
+    for(int i=0;i<m;i++){
 
-    float sem2_total_marks=(sgpa2-0.5)*(800)*0.1;
+        for(int j=0;j<n;j++){
 
-    cout<<"Sem2 total marks obtain = "<<sem2_total_marks<<endl;
+            cin>>matrix[i][j];
+        }
+    }
 
+    //transpose matrix ;
 
-
-    float sem1_percentage=(sgpa1-0.5)*10;
-    cout<<"The percentage of the sem1 is = "<<sem1_percentage<<endl;
-
-
-    float sem2_percentage=(sgpa2-0.5)*10;
-    cout<<"The percentage of the sem2 is = "<<sem2_percentage<<endl;
+    int t[n][m];
 
 
-    float cgpa=(sgpa1+sgpa2)/2;
-    cout<<"cgpa is = "<<cgpa<<endl;  //I have done it one the basis of how to calculate cgpa;
+    for(int i=0;i<n;i++){
 
+        for(int j=0;j<m;j++){
 
-    float cumulative_percentage=(cgpa-0.5)*10;
-    cout<<"the cumulative percentage is = "<<cumulative_percentage<<endl;
+            t[i][j]=matrix[j][i];
+        }
+    }
 
-   
+    for(int i=0;i<n;i++){
+
+        for(int j=0;j<m;j++){
+
+           cout<<t[i][j]<<" ";
+        }
+
+        cout<<endl;
+    }
+
 
     return 0;
 }
