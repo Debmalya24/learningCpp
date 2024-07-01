@@ -25,29 +25,25 @@ int main(){
         }
     }
 
-    //transpose matrix ;
+    int mid=n/2;
 
-    int t[n][m];
+     for(int i=0;i<m;i++){
 
+        for(int j=0;j<n;j++){
 
-    for(int i=0;i<n;i++){
+            if(i==mid || j==mid){
 
-        for(int j=0;j<m;j++){
+                cout<<matrix[i][j]<<" ";
+            }
+            else {
 
-            t[i][j]=matrix[j][i];
+                cout<<"  ";
+            }
+
+           
         }
+         cout<<endl;
     }
-
-    for(int i=0;i<n;i++){
-
-        for(int j=0;j<m;j++){
-
-           cout<<t[i][j]<<" ";
-        }
-
-        cout<<endl;
-    }
-
 
     return 0;
 }
