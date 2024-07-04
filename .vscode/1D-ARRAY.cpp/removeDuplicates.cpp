@@ -32,7 +32,7 @@ int main(){
         }
     }
 
-    cout<<i+1<<endl;
+    cout<<"After removing the doublets the total number of the elements will be : "<<i+1<<endl;
 
 
     return 0;

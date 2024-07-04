@@ -31,6 +31,11 @@ int main(){
             s_max=max;
             max=arr[i];
         }
+
+        else if(arr[i]<max && arr[i]>s_max){
+
+            s_max=arr[i];
+        }
     }
 
     cout<<"the maximum element will be : "<<max<<" "<<endl;
