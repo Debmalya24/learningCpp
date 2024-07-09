@@ -5,13 +5,15 @@
 #include <algorithm>
 using namespace std;
 
-void setZeroes(vector<vector<int>>&v){
+void setZeroes( vector<vector<int>>&v){
 
     int m=v.size();
     int n=v[0].size();
 
     vector<bool>row(m,false);
     vector<bool>col(n,false);
+    
+    //select the rows and col which contain the ele zero
 
     for(int i=0;i<m;i++){
 
@@ -19,10 +21,9 @@ void setZeroes(vector<vector<int>>&v){
 
             if(v[i][j]==0){
 
-                row[i]=true;
-                col[j]=true;
+                row[i]=true;//contain zero
+                col[j]=true;//contain zero
             }
-
         }
     }
 
@@ -39,7 +40,7 @@ void setZeroes(vector<vector<int>>&v){
         }
     }
 
-    //set column zero;
+    //set col zero
 
     for(int j=0;j<n;j++){
 
@@ -52,21 +53,18 @@ void setZeroes(vector<vector<int>>&v){
         }
     }
 
-    return ;
+    return;
 }
-
-
 
 int main(){
 
     int m;
-    cout<<"Enter the no. of rows : ";
+    cout<<"Enter the number of rows : ";
     cin>>m;
 
     int n;
-    cout<<"Enter the no. of column : ";
+    cout<<"Enter the number of columns : ";
     cin>>n;
-
 
     vector<vector<int>>v(m,vector<int>(n));
 
@@ -80,18 +78,16 @@ int main(){
 
     setZeroes(v);
 
+     //print
 
-    for(int i=0;i<m;i++){
+     for(int i=0;i<m;i++){
 
         for(int j=0;j<n;j++){
 
-            cout<<v[i][j]<<" ";
+           cout<<v[i][j]<<" ";
         }
-
         cout<<endl;
     }
 
-
     return 0;
-
 }
