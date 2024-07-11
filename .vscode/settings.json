@@ -5,7 +5,8 @@
         "cmath": "cpp",
         "ostream": "cpp",
         "valarray": "cpp",
-        "vector": "cpp"
+        "vector": "cpp",
+        "initializer_list": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
