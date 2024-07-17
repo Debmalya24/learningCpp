@@ -6,34 +6,20 @@
 using namespace std;
 
 int main(){
+    int n;
+    cout<<"enter the index of  ele : ";
+    cin>>n;
 
-    int m;
-    cout<<"Enter the number of rows in the array: ";
-    cin>>m;
+    int ele;
+     int sum=0;
+     for(int i=1;i<=n;i++){
 
-    vector<int>v;
-
-    for(int i=0;i<m;i++){
-
-        int ele;
+        cout<<"enter the number : ";
         cin>>ele;
-        v.push_back(ele);
+        sum=sum+ele;
     }
 
-    int i=0;
-
-    for(int j=1;j<m;j++){
-
-        if(v[i] != v[j]){
-
-            v[i+1]=v[j];
-
-            i++;
-        }
-    }
-
-    cout<<i+1<<endl;
-
+    cout<<"The sum of the element will be = > "<<sum<<" ";
 
     return 0;
 

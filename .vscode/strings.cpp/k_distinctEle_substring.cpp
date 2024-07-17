@@ -16,14 +16,12 @@ int main(){
 
     int n=str.size();
     int count=0;
+    int count2=0;
 
     int k;
     cout<<"enter k : ";
     cin>>k;
-
-    int maxLength=0;
-    string longestSubstring="";
-
+    string s="";
 
     //checking the condition if all ch are lowercas or not
      for (int i=0;i<str.size();i++) {
@@ -38,41 +36,28 @@ int main(){
 
       string substring=(str.substr(i,(j-i)));
 
-      //set<char>uniqueChars(substring.begin(),substring.end());
+      set<char>uniqueChars(substring.begin(),substring.end());
 
-      int n=0;
-      int m=substring.size()-1;
+      if(uniqueChars.size()==k){
 
-      while(n<=m){
+        v.push_back(substring);
 
-        if(substring[n]==substring[m]){
-
-          count++;
-          n++;
-          m--;
-        }
-
-        if(count>=k){
-
-          if(substring.size()>maxLength){
-
-               maxLength=substring.size();
-               longestSubstring=substring;
-               v.push_back(longestSubstring);
-
-          }
-        }
       }
 
     }
    }
+
+   //cout<<s<<endl;
+   count2=v.size();
+
+   cout<<"expected substring : "<<endl;
 
    for(int i=0;i<v.size();i++){
 
     cout<<v[i]<<endl;
    }
 
-
+   cout<<"total count will be : "<<count2;
 
     return 0;
 }
