@@ -1,3 +1,4 @@
+#include <cmath>
 #include <cstdio>
 #include <vector>
 #include <iostream>
@@ -6,13 +7,9 @@
 #include<sstream>
 #include <limits.h>
 #include<set>
-
 int main(){
 
-    string str;
-    getline(cin, str);
+    int arr[8]={2,3,4,5,6,7,8,1};
 
-    cout<<str<<" ";
-    return 0;
+    vector<int>v;
 }
-

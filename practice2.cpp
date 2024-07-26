@@ -6,30 +6,25 @@
 #include<string>
 #include<sstream>
 #include <limits.h>
-using namespace std;
+#include<set>
+
 int main(){
-    string s;
-    cin>>s;
 
-    int count=0;
-    int max_count=0;
-    
-    for(int i=0;i<s.size();i++){
+  string str;
+  cout<<"enter the string : ";
+  getline(cin,str);
+  string s="";
 
-        if(s[i]=='a'||s[i]=='e'||s[i]=='i'||s[i]=='o'||s[i]=='u'||
-           s[i]=='A'||s[i]=='E'||s[i]=='I'||s[i]=='O'||s[i]=='U'){
+  for(int i=0;i<str.size();i++){
 
-            count++;
-        }
+    if(i%2 !=0){
 
-        else{
-
-            max_count+=(count*(count+1))/2;
-            count=0;
-        }
+      s=s+str[i];
     }
+  }
 
-     max_count+=(count*(count+1))/2;
-     cout<< max_count<<" "<<endl;
+  //cout<<s<<endl;
 
+  return 0;
 }
+
